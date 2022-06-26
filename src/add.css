@@ -20,7 +20,7 @@
      margin: 40px;
      display:grid; 
     /* padding-left: 170px; */
-    
+    height: 100vh;
      
 }
 input[type="file"] {
