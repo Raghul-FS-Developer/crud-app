@@ -21,7 +21,7 @@ const navigate = useNavigate()
 
  const handleSubmit = async(e)=>{
     e.preventDefault()
-     let res = await axios.post(`http://localhost:4000/add`,formdata)
+     let res = await axios.post(`https://crud-app-7.herokuapp.com/add`,formdata)
 
     if(res.data.statusCode === 200){
       navigate('/')

@@ -19,7 +19,7 @@ function Edit() {
   };
 
   const getData = async () => {
-    let res = await axios.get(`http://localhost:4000/get/${params.id}`);
+    let res = await axios.get(`https://crud-app-7.herokuapp.com/get/${params.id}`);
     let data = res.data;
     setName(data.name);
     setAge(data.age);
@@ -59,7 +59,7 @@ function Edit() {
     e.preventDefault();
 
     let res = await axios.post(
-      `http://localhost:4000/editing/${params.id}`,
+      `https://crud-app-7.herokuapp.com/editing/${params.id}`,
       formdata
     );
 

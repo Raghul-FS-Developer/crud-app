@@ -16,7 +16,7 @@ function All() {
   let handleDelete = async(id)=>{
     let res = window.confirm('Do you want to delete this?')
     if (res == true) {
-      await axios.delete(`http://localhost:4000/delete/${id}`)
+      await axios.delete(`https://crud-app-7.herokuapp.com/delete/${id}`)
       getData()  
     }
       }
@@ -25,7 +25,7 @@ function All() {
   }
 
   let getData = async()=>{
-    let res = await axios.get(`http://localhost:4000/all`)
+    let res = await axios.get(`https://crud-app-7.herokuapp.com/all`)
     setData(res.data.data)
   }
 
