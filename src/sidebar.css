@@ -2,7 +2,7 @@
 .head{
     /* height:calc(100vh-10px); */
     min-height:568px;
-    /* max-height:300vh; */
+    max-height:300vh;
     min-width: 300px;
     width: 800px;
     color: white;
