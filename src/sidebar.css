@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap');
 .head{
     /* height:calc(100vh-10px); */
-    /* min-height:568px; */
-    height:100vh;
+    min-height:568px;
+    /* max-height:300vh; */
     min-width: 300px;
     width: 800px;
     color: white;
