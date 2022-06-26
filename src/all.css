@@ -1,0 +1,12 @@
+.margin{
+ width: 1400px;;
+   
+}
+
+
+.images{
+    width: 100px;
+    object-fit: cover;
+    height: 100px;
+}
+

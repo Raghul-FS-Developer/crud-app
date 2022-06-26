@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap');
+.img{
+    width: 200px;
+    height:200px;
+    border-radius: 100px;
+    margin-left: 140px;
+  object-fit: cover;
+  
+}
+
+.both{
+    border: 4px dashed teal;
+    width:fit-content;
+    margin-left:30px ;
+   border-radius: 150px;
+  background-color: whitesmoke;
+   
+} 
+ .mains{
+     margin: 40px;
+     display:grid; 
+    /* padding-left: 170px; */
+    
+     
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    
+    color:teal;
+    margin-left: 45px;
+    
+    position:absolute;
+    top:125px;
+    cursor: pointer;
+    font-family: 'Signika Negative', sans-serif;
+    padding: 4px;
+    display: flex;
+    align-items: center;   
+}
+.form-control{
+    border:none;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color:teal;
+  
+    
+}
+.btn-primary{
+   background-color: teal !important;
+   font-family: 'Signika Negative', sans-serif;
+}
+.form-group{
+    font-family: 'Signika Negative', sans-serif;
+}.btn-danger{
+    background-color: crimson !important;
+    border-color: crimson;
+}
