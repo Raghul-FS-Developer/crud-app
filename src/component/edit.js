@@ -64,7 +64,7 @@ function Edit() {
     );
 
     if (res.data.statusCode === 200) {
-      navigate("/");
+      navigate("/all");
     } else {
       setMsg(res.data.message);
     }

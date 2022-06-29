@@ -24,7 +24,7 @@ const navigate = useNavigate()
      let res = await axios.post(`https://crud-app-7.herokuapp.com/add`,formdata)
 
     if(res.data.statusCode === 200){
-      navigate('/')
+      navigate('/all')
     }else{
       setMsg(res.data.message)
     }

@@ -14,8 +14,8 @@ function App() {
     <Router>
       <Routes>
         <Route path='/edit/:id' element={<Edit/>}/>
-        <Route path='/' element={<All/>}/>
-        <Route path='/add' element={<Add/>}/>
+        <Route path='/all' element={<All/>}/>
+        <Route path='/' element={<Add/>}/>
      
       </Routes>
     </Router>
