@@ -13,14 +13,14 @@ function SideBar() {
 
         <h3 className="algs">
           <AiOutlineUserAdd size={45} />
-          <a href="/add" className="alls">
+          <a href="/" className="alls">
             <u>Add Employee</u>
           </a>
         </h3>
 
         <h3 className="alg">
           <FiUsers size={45} />
-          <a href="/" className="alls">
+          <a href="/all" className="alls">
             <u>All Employee</u>
           </a>
         </h3>
