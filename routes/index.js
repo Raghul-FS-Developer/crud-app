@@ -18,6 +18,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/add',upload.single("image"),async(req,res)=>{
 
+  
   try {
     let result = await user(req.body);
     if (req.file) {
