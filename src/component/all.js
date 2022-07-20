@@ -2,7 +2,8 @@ import React ,{useEffect, useState}from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../all.css'
 import axios from 'axios'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function All() {
 
@@ -14,10 +15,17 @@ function All() {
   let navigate=useNavigate()
 
   let handleDelete = async(id)=>{
-    let res = window.confirm('Do you want to delete this?')
-    if (res == true) {
-      await axios.delete(`https://crud-app-7.herokuapp.com/delete/${id}`)
+   
+    let res= await axios.delete(`https://crud-app-7.herokuapp.com/delete/${id}`)
+
+    if(res.status === 200){
+      toast.info("deleted successfully",{
+
+        icon:'👍'
+      })
       getData()  
+    }else{
+      toast.error('deletion failed')
     }
       }
   let handleEdit=(id)=>{
@@ -32,6 +40,7 @@ function All() {
 
   return (
     <div className='margin'>
+    <ToastContainer limit={3} />
     <table class="table table-striped">
     <thead>
         <tr className='align2'>

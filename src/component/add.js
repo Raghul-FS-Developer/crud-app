@@ -3,6 +3,8 @@ import '../add.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import env from 'react-dotenv';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { AiFillCamera } from 'react-icons/ai';
 function Add() {
 
@@ -21,20 +23,29 @@ const navigate = useNavigate()
 
  const handleSubmit = async(e)=>{
     e.preventDefault()
+    const id = toast.loading("posting...")
      let res = await axios.post(`https://crud-app-7.herokuapp.com/add`,formdata)
 
     if(res.data.statusCode === 200){
       navigate('/all')
+      setTimeout(()=>toast.info("posted successfully", {icon:'👍'}),500)
     }else{
       setMsg(res.data.message)
     }
    
   }
   const handleImage=(e)=>{ 
+    if(e.target.files[0].size <= 10356302){
+
     setImage(URL.createObjectURL(e.target.files[0]))
     setImg(e.target.files[0])
+    }else{
+      toast.error("Image size should be less than 10mb")
+    }
   }
-  
+ 
+
+
   const formdata = new FormData()
   
   formdata.append('name',name)
@@ -47,7 +58,7 @@ const navigate = useNavigate()
 
   return (
 <div className='mains'>
-
+<ToastContainer limit={1} />
 <label className='both'>
   <img src={image} className='img'/>
   </label>
@@ -84,7 +95,9 @@ const navigate = useNavigate()
  </div>
  <p style={{color:"red"}}>{msg}</p>
   <button type="submit" class="btn btn-primary" >Submit</button>
+
 </form>
+
   </div>
   )
 }

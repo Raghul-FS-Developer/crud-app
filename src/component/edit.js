@@ -4,6 +4,8 @@ import env from "react-dotenv";
 import { AiFillCamera } from "react-icons/ai";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Edit() {
   useEffect(() => {
@@ -13,10 +15,16 @@ function Edit() {
   const navigate = useNavigate();
   let params = useParams();
 
-  const handleImage = (e) => {
-    setImage(URL.createObjectURL(e.target.files[0]));
-    setImg(e.target.files[0]);
-  };
+  const handleImage=(e)=>{ 
+    if(e.target.files[0].size <= 10356302){
+
+    setImage(URL.createObjectURL(e.target.files[0]))
+    setImg(e.target.files[0])
+    }else{
+      toast.error("Image size should be less than 10mb")
+    }
+  }
+ 
 
   const getData = async () => {
     let res = await axios.get(`https://crud-app-7.herokuapp.com/get/${params.id}`);
@@ -57,6 +65,7 @@ function Edit() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const id = toast.loading("updating...")
 
     let res = await axios.post(
       `https://crud-app-7.herokuapp.com/editing/${params.id}`,
@@ -65,12 +74,15 @@ function Edit() {
 
     if (res.data.statusCode === 200) {
       navigate("/all");
-    } else {
+      //  setTimeout(()=> toast.update( { render: "posted successfully", type: "info",icon:'👍', isLoading: false ,closeButton:true,autoClose:true}),1000)
+    setTimeout(()=>toast.info("updated successfully", {icon:'👍'}),500)
+      } else {
       setMsg(res.data.message);
     }
   };
   return (
     <div className="mains">
+          <ToastContainer  />
       <label className="both">
         <img src={image} className="img" />
       </label>
