@@ -2,7 +2,7 @@ window.env = {
   "ALLUSERSPROFILE": "C:\\ProgramData",
   "APPDATA": "C:\\Users\\hi\\AppData\\Roaming",
   "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "true",
-  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_8640_FNABETOUUMLNHPSL",
+  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_13128_YFJVHHOZEPOHPSNR",
   "COLOR": "1",
   "COLORTERM": "truecolor",
   "CommonProgramFiles": "C:\\Program Files\\Common Files",
@@ -78,6 +78,6 @@ window.env = {
   "VSCODE_GIT_ASKPASS_EXTRA_ARGS": "--ms-enable-electron-run-as-node",
   "VSCODE_GIT_ASKPASS_MAIN": "c:\\Users\\hi\\AppData\\Local\\Programs\\Microsoft VS Codes\\resources\\app\\extensions\\git\\dist\\askpass-main.js",
   "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\hi\\AppData\\Local\\Programs\\Microsoft VS Codes\\Code.exe",
-  "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-f46403bc3b-sock",
+  "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-7505bd8ff9-sock",
   "windir": "C:\\WINDOWS"
 };

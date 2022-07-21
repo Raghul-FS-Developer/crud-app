@@ -6,7 +6,7 @@ import { FiUsers } from "react-icons/fi";
 function SideBar() {
   return (
     <>
-      <div className="head">
+      <div className="head" >
          <div className="sidebar">
          <u>Employee Portal</u>
         </div>
