@@ -23,12 +23,12 @@ const navigate = useNavigate()
 
  const handleSubmit = async(e)=>{
     e.preventDefault()
-    const id = toast.loading("posting...")
+    const id = toast.loading("Adding...")
      let res = await axios.post(`https://crud-app-7.herokuapp.com/add`,formdata)
 
     if(res.data.statusCode === 200){
       navigate('/all')
-      setTimeout(()=>toast.info("posted successfully", {icon:'👍'}),500)
+      setTimeout(()=>toast.info("Added successfully", {icon:'👍'}),500)
     }else{
       setMsg(res.data.message)
     }

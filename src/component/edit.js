@@ -65,7 +65,7 @@ function Edit() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const id = toast.loading("updating...")
+    const id = toast.loading("Updating...")
 
     let res = await axios.post(
       `https://crud-app-7.herokuapp.com/editing/${params.id}`,
@@ -75,7 +75,7 @@ function Edit() {
     if (res.data.statusCode === 200) {
       navigate("/all");
       //  setTimeout(()=> toast.update( { render: "posted successfully", type: "info",icon:'👍', isLoading: false ,closeButton:true,autoClose:true}),1000)
-    setTimeout(()=>toast.info("updated successfully", {icon:'👍'}),500)
+    setTimeout(()=>toast.info("Updated successfully", {icon:'👍'}),500)
       } else {
       setMsg(res.data.message);
     }

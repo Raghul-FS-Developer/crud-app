@@ -19,13 +19,13 @@ function All() {
     let res= await axios.delete(`https://crud-app-7.herokuapp.com/delete/${id}`)
 
     if(res.status === 200){
-      toast.info("deleted successfully",{
+      toast.info("Deleted successfully",{
 
         icon:'👍'
       })
       getData()  
     }else{
-      toast.error('deletion failed')
+      toast.error('Deletion failed')
     }
       }
   let handleEdit=(id)=>{
