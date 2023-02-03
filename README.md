@@ -12,6 +12,7 @@ Packages I Used..!<br/>
 axios<br/>
 react-icons<br/>
 react-dotenv<br/>
+react-toastify<br/>
 react-router-dom<br/>
 cors<br/>
 dotenv<br/>
