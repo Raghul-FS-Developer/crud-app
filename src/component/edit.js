@@ -27,7 +27,7 @@ function Edit() {
  
 
   const getData = async () => {
-    let res = await axios.get(`https://crud-app-7.herokuapp.com/get/${params.id}`);
+    let res = await axios.get(`https://https-crud-app-7-herokuapp-com-78ox.onrender.com/get/${params.id}`);
     let data = res.data;
     setName(data.name);
     setAge(data.age);
@@ -68,7 +68,7 @@ function Edit() {
     const id = toast.loading("Updating...")
 
     let res = await axios.post(
-      `https://crud-app-7.herokuapp.com/editing/${params.id}`,
+      `https://https-crud-app-7-herokuapp-com-78ox.onrender.com/editing/${params.id}`,
       formdata
     );
 

@@ -16,7 +16,7 @@ function All() {
 
   let handleDelete = async(id)=>{
    
-    let res= await axios.delete(`https://crud-app-7.herokuapp.com/delete/${id}`)
+    let res= await axios.delete(`https://https-crud-app-7-herokuapp-com-78ox.onrender.com/delete/${id}`)
 
     if(res.status === 200){
       toast.info("Deleted successfully",{
@@ -33,10 +33,10 @@ function All() {
   }
 
   let getData = async()=>{
-    let res = await axios.get(`https://crud-app-7.herokuapp.com/all`)
+    let res = await axios.get(`https://https-crud-app-7-herokuapp-com-78ox.onrender.com/all`)
     setData(res.data.data)
   }
-
+console.log(data)
 
   return (
     <div className='margin'>

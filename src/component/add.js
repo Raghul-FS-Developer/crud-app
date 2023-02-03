@@ -24,7 +24,7 @@ const navigate = useNavigate()
  const handleSubmit = async(e)=>{
     e.preventDefault()
     const id = toast.loading("Adding...")
-     let res = await axios.post(`https://crud-app-7.herokuapp.com/add`,formdata)
+     let res = await axios.post(`https://https-crud-app-7-herokuapp-com-78ox.onrender.com/add`,formdata)
 
     if(res.data.statusCode === 200){
       navigate('/all')
